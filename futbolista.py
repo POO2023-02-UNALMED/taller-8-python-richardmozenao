@@ -29,6 +29,6 @@ class Futbolista(Persona, Deportista):
         cls.listaFutbolistas = p
 
     def __str__(self):
-        return "Mi nombre es {} soy profesional en el deporte {} tengo {} años de edad y llevo {}".format(Persona.getNombre(), Deportista.getDeporte(), Persona.getedad(), Deportista.getAñosPracticando())
+        return "Mi nombre es {} soy profesional en el deporte {} Tengo {} años de edad y llevo {}".format(self.getNombre(), self.getDeporte(), self.getEdad(), self.getAñosPracticando())
 
 
