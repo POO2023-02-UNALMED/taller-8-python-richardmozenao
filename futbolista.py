@@ -3,11 +3,12 @@ from persona import Persona
 
 class Futbolista(Persona, Deportista):
     listaFutbolistas = []
-    def __init__(self, nombre, edad, altura, sexo, deporte, añosPracticando, golesMarcados, tarjetasRojas):
+    def __init__(self, nombre, edad, altura, sexo, añosPracticando, golesMarcados, tarjetasRojas, piernaHabil):
         super().__init__(nombre, edad, altura, sexo)
-        Deportista.__init__(self, deporte, añosPracticando)
+        Deportista.__init__(self, "Futbol", añosPracticando)
         self._golesMarcados = golesMarcados
         self._tarjetasRojas = tarjetasRojas
+        self._piernaHabil = piernaHabil
         Futbolista.listaFutbolistas.append(self)
 
     def getGolesMarcados(self):
@@ -27,6 +28,12 @@ class Futbolista(Persona, Deportista):
     
     def setListaFutbolistas(cls, p):
         cls.listaFutbolistas = p
+
+    def getPiernaHabil(self):
+        return self._piernaHabil
+    
+    def setPiernaHabil(self, p):
+        self._piernaHabil = p
 
     def __str__(self):
         return "Mi nombre es {} soy profesional en el deporte {} Tengo {} años de edad y llevo {} años en el deporte".format(self.getNombre(), self.getDeporte(), self.getEdad(), self.getAñosPracticando())
