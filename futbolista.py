@@ -29,6 +29,17 @@ class Futbolista(Persona, Deportista):
         cls.listaFutbolistas = p
 
     def __str__(self):
-        return "Mi nombre es {} soy profesional en el deporte {} Tengo {} años de edad y llevo {}".format(self.getNombre(), self.getDeporte(), self.getEdad(), self.getAñosPracticando())
+        return "Mi nombre es {} soy profesional en el deporte {} Tengo {} años de edad y llevo {} años en el deporte".format(self.getNombre(), self.getDeporte(), self.getEdad(), self.getAñosPracticando())
 
+    def getGolesMarcados(self):
+        return self._golesMarcados
+    
+    def setGolesMarcados(self, p):
+        self._golesMarcados = p
+
+    def getTarjetasRojas(self):
+        return self._tarjetasRojas
+    
+    def setTarjetasRojas(self, p):
+        self._tarjetasRojas = p
 
